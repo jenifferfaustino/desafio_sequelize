@@ -1,0 +1,127 @@
+#  API de Usuários, Produtos e Pedidos
+
+Este projeto é uma API REST desenvolvida com Node.js, Express e Sequelize com pedido, produto e usuario 
+
+##  Funcionalidades
+
+  CRUD de usuários
+  CRUD de produtos
+  Criação de pedidos
+  Relacionamento entre pedidos e produtos
+  Validação de regras de negócio:
+
+   Usuário 
+   Produto 
+   Atualiza estoque automaticamente
+
+---
+
+##  Tecnologias utilizadas
+
+* Node.js
+* Express
+* Sequelize
+* MySQL
+* Nodemon
+
+---
+
+https://github.com/jenifferfaustino/desafio_sequelize.git
+
+
+
+### 2. Entrar na pasta
+
+```bash
+cd desafio_sequelize
+
+
+### 3. Instalar dependências
+
+bash
+npm install
+
+
+### 4. Configurar o banco de dados
+
+Crie um arquivo `.env` 
+
+env
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=sua_senha
+DB_NAME=desafio_sequelize
+DB_DIALECT=mysql
+PORT=3000
+
+
+
+
+### 5. Criar o banco no MySQL 
+MYSQL 
+CREATE DATABASE desafio_sequelize;
+
+
+
+
+### 6. Rodar o projeto
+
+bash
+npx nodemon src/app.js
+
+
+
+## Rotas principais
+
+###  UUSUARIOSS
+
+* POST `/usuarios`
+* GET `/usuarios`
+* GET `/usuarios/:id`
+* PUT `/usuarios/:id`
+* DELETE `/usuarios/:id`
+
+
+
+###  PRODUTOS
+
+* POST `/produtos`
+* GET `/produtos`
+
+---
+
+###  PEDIDOS
+
+* POST `/pedidos`
+
+### Exemplo de criação de pedido:
+
+json
+{
+  "usuarioId": 1,
+  "produtos": [
+    { "id": 1, "quantidade": 2 },
+    { "id": 2, "quantidade": 1 }
+  ]
+}
+
+
+## Estrutura do Projeto
+
+src/
+ ├── config/
+ ├── controllers/
+ ├── models/
+ ├── routes/
+ └── app.js
+```
+
+
+
+
+
+
+
+
+
+
